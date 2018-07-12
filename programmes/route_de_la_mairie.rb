@@ -10,7 +10,7 @@ def get_all_the_urls_of_val_doise_townhalls(dpt_name)
   puts 'Les url ont été extraites, merci de patienter le temps de tout parcourir et de vous donner les e-mails'
   url_array = [] #crée une array vide
   for i in (0...@size) do  #crée une boucle de 0 au nombre de a.lientxt retournés
-    extract_url = extract_a[i]['href'] # recherche le texte affiché sur le site des balises href 
+    extract_url = extract_a[i]['href'] # extrait le texte des balises href 
     extract_url[0] = 'http://annuaire-des-mairies.com' #remplace le premier caractère (.) par le début de l'url
     url_array << extract_url.to_s #converti le résultat en string et l'ajoute dans l'array
   end
